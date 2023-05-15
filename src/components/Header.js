@@ -20,16 +20,16 @@ function Header({ searchQuery = "", onTextChange, onGenreChange, selectedGenre =
         />
       </div>
       <div>
-        <FormControl sx={{ m: 1, minWidth: 120 }}>
-          <InputLabel id="demo-simple-select-autowidth-label" style={{ color: "white" }}>
+        <FormControl variant="filled" sx={{ m: 1, minWidth: 120 }}>
+          <InputLabel id="demo-simple-select-filled-label" style={{ color: "white" }}>
             Filter by genre:
           </InputLabel>
-          <br />
+           <div className="spacelabel">{/* spacing */}</div>
           <Select
-           labelId="demo-simple-select-autowidth-label"
-           id="genres"
+           labelId="demo-simple-select-filled-label"
+           id="demo-simple-select-filled"
            name="genres"
-           value={selectedGenre}
+           value={selectedGenre === '' ? 'All' : selectedGenre}
            onChange={onGenreChange}
            autoWidth
            style={{ color: "white" }}

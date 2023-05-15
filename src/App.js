@@ -14,7 +14,7 @@ function App() {
   const [movieList, updateMovieList] = useState([]);
   const [selectedMovie, onMovieSelect] = useState();
   const [timeoutId, updateTimeoutId] = useState();
-  const [selectedGenre, setSelectedGenre] = useState('');
+  const [selectedGenre, setSelectedGenre] = useState('O');
 
 
   const fetchData = async (searchQuery, selectedGenre) => {
@@ -54,7 +54,7 @@ function App() {
   
   return (
     <div className="container">
-      <Header searchQuery={searchQuery} onTextChange={handleTextChange} onGenreChange={handleGenreChange} />
+      <Header searchQuery={searchQuery} onTextChange={handleTextChange} onGenreChange={handleGenreChange} selectedGenre={selectedGenre} />
       {selectedMovie && <MovieInfoComponent selectedMovie={selectedMovie} />}
       <div className="MovieListContainer">
         {movieList?.length ? (
