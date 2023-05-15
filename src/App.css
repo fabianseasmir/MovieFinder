@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
+*{
+  font-family: 'Roboto', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+body{
+  background-color: #040814;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+.container{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #040814;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #040814;
   color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  box-shadow: 0 3px 6px 0 #39558e;
 }
 
-.App-link {
-  color: #61dafb;
+.MovieImage{
+  width: 48px;
+  height: 48px;
+  margin: 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.appName{
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
 }
+
+.SearchBox{
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px;
+  border-radius: 6px;
+  margin-left: 20px;
+  width: 50%;
+  background-color: white;
+}
+
+.SearchIcon{
+  width: 25px;
+  height: 25px
+}
+
+.SearchInput{
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  margin-left: 15px;
+}
+
+.MovieListContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 30px;
+  gap: 25px;
+  justify-content: space-evenly;
+}
+
+.MovieContainer{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 280px;
+  box-shadow: 0 3px 10px 0 #aaa;
+  cursor: pointer;
+}
+
+.NotMovie{
+  width: 120px;
+  height: 120px;
+  margin: 150px;
+  opacity: 50%;
+}
+
+.PosterInfo{
+  width: 200px;
+  height: 300px;
+  opacity: 50%;
+}
+
+.boxcon{
+  display: flex;
+  flex-direction: row;
+}
+
+.boxcolumn{
+  display: flex;
+  flex-direction: column;
+  padding-left: 14px;
+}
+
+.infocolumn{
+  font-size: 12px;
+}
+
+.ratingcontainer{
+    display: flex;
+    flex-direction: row; 
+}
+
+.ratingicon{
+  width: 25px;
+  height: 25px;
+  padding-top: 20px;
+}
+
+.ratingparag{
+ padding-top: 17px;
+ padding-left: 5px;
+ font-size: 13px;
+}
+
