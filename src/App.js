@@ -19,7 +19,7 @@ function App() {
 
   const fetchData = async (searchQuery, selectedGenre) => {
     const query = searchQuery || '';
-    const genre = selectedGenre || '';
+    const genre = selectedGenre === '0' ? '' : selectedGenre;
     let url = '';
     if (query && genre) {
       url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}&with_genres=${genre}`;
@@ -32,6 +32,7 @@ function App() {
     updateMovieList(response.data.results);
   };
   
+
   
   
 
@@ -45,8 +46,9 @@ function App() {
   
   
   const handleGenreChange = (event) => {
-    setSelectedGenre(event.target.value);
-    fetchData(searchQuery, event.target.value);
+    const genre = event.target.value;
+    setSelectedGenre(genre);
+    fetchData(searchQuery, genre === null ? '' : genre);
   };
   
   

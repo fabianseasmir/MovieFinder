@@ -34,7 +34,7 @@ function Header({ searchQuery = "", onTextChange, onGenreChange, selectedGenre =
            autoWidth
            style={{ color: "white" }}
           >
-             <MenuItem value="">
+             <MenuItem value="O">
                All genres
              </MenuItem>
              <MenuItem value="28">Action</MenuItem>
