@@ -18,7 +18,7 @@ const MovieComponent = (props) => {
                  sx={{ height: 305 }}
                  image={Poster? `https://image.tmdb.org/t/p/w500${Poster}`: 'https://archive.org/download/no-photo-available/no-photo-available.png'}
                 />
-              <CardContent>
+              <CardContent sx={{height: '80px'}}>
                  <Typography gutterBottom variant="h6" component="div">
                      {Title}
                  </Typography>

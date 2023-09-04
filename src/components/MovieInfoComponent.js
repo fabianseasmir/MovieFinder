@@ -56,9 +56,10 @@ const MovieInfoComponent = (props) => {
                            <h5>Release Date</h5>
                            <span className='infocolumn'>{movieInfo.release_date}</span>
                            <h5>{movieInfo.production_countries.length === 1 ? 'Production Country' : 'Production Countries'}</h5>
-                           {movieInfo.production_countries.map((country, index) => (
-                              <span key={index} className="infocolumn">• {country.name}</span>
+                           {movieInfo.production_countries.length === 0 ? (<span className='infocolumn'>No information...</span>) : ( movieInfo.production_countries.map((country, index) => (
+                              <span key={index} className="infocolumn">• {country.name}</span> )
                             ))}
+                            
                           <div className="ratingcontainer">
                              <img src={ratingicon} className="ratingicon" />
                              <p className="ratingparag">
